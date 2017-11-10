@@ -1,19 +1,18 @@
 function allLongestStrings(inputArray) {
     var repo = []
-    var size  = cont = 0
+    var size  = 0, cont = 0
 
-inputArray.forEach(function(a) {
-  if(a.length >= size) {
-   size=a.length
+inputArray.forEach(function(element) {
+  if(element.length >= size) {
+   size = element.length
    }
-});
+})
 
-inputArray.forEach(function(a) {
-  if(a.length === size) {
-    repo[cont] = a;
-    cont++
+inputArray.forEach(function(element) {
+  if(element.length === size) {
+    repo[cont] = element
+    cont ++
    }
-});
-
+})
     return repo
 }
