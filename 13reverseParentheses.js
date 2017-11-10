@@ -1,14 +1,13 @@
-var s = "The ((quick (brown) (fox) jumps over the lazy) dog)"
-
 var aux = [], solution = []
 var cont = 0, cont2 = 0, stop = 0
 var flag = null
 var firstBracket = 0, lastBracket = 0, contBracket = 0
 var backupS = s
-s = Array.from(s) //convierte la cadena original en array
 
-s.forEach(function(e) { //cuenta cuantos paréntesis hay
-  if(e==="("){contBracket++}
+s = Array.from(s)
+
+s.forEach(function(element) { //cuenta cuantos paréntesis hay
+  if(element === "(") contBracket++
 })
 
 if(contBracket === 0) {
@@ -16,10 +15,10 @@ if(contBracket === 0) {
 }
 
 else {
-  do{
+  do {
     cont = 0
     flag = false
-    do{ //encuentra el un grupo más centrico entre paréntesis
+    do { //encuentra el un grupo más centrico entre paréntesis
       if(s[cont] === "(") {
         firstBracket = cont
       }
@@ -50,16 +49,16 @@ else {
     lastBracket = lastBracket - 1 //elimina los parentesis actuales
     s.splice(firstBracket, 1)
     s.splice(lastBracket, 1)
-    stop++
+    stop ++
     console.log(stop + ": " + s)
   } while (stop != contBracket)
 
   s = s.toString()
   solution = s[0]
 
-  for(var i = 0 ; i < s.length-2 ; i++ ) {
+  for(var i = 0 ; i < s.length-2 ; i ++ ) {
     if(i % 2 === 0) {
-      solution = solution + s[i+2]
+      solution = solution + s[i + 2]
     }
   }
 }

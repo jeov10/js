@@ -13,11 +13,11 @@ function commonCharacterCount(s1, s2) {
   }
 
   do{
-    for(i=0; i < arraySmall.length ; i++){
+    for(i=0 ; i < arraySmall.length ; i++){
       for(j=0 ; j < arrayBig.length ; j++){
         if(arraySmall[i] === arrayBig[j]) {
-            arraySmall.splice(i,1)
-            arrayBig.splice(j,1)
+            arraySmall.splice(i, 1)
+            arrayBig.splice(j, 1)
             i = j = 0
         }
       }
