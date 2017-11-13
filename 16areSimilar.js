@@ -5,10 +5,13 @@ function areSimilar(a, b) {
 
   while(cont < a.length){
     for (var i = 0 ; i < a.length ; i ++){
+      console.log(a + " " + b)
       if (a[i] === b[i]) {
         a.splice(i, 1)
         b.splice(i, 1)
+        i = 0
       }
+      console.log(a + " " + b)
     }
     cont ++
   }
