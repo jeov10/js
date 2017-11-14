@@ -3,5 +3,5 @@ function makeArrayConsecutive2(statues) {
   var max = Math.max(...statues) //obtiene valor máximo del array
   var counter = max - min
 
-  return counter+1 - statues.length
+  return counter + 1 - statues.length
 }

@@ -3,7 +3,7 @@ function centuryFromYear (year) {
     var residuo = 0
 
     if (year % 100 === 0) {
-        century = year/100
+        century = year / 100
         return century
     } else {
       century = year / 100
