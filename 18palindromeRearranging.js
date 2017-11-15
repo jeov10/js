@@ -1,6 +1,4 @@
 var inputString = "bbabba"
-var palindrome = []
-var sizeString = inputString.length
 inputString = Array.from(inputString)
 var reverseString = inputString.slice().reverse()
 var cont = 0
@@ -9,11 +7,19 @@ var cont = 0
 //    return true
 //}
 
-for ( var j = 0 ; j < sizeString ; j ++) {
-  for (var i = 1 ; i < sizeString ; i ++) { // cuando el string es par
-    if (inputString[j] === inputString[i + 1]) {
-        inputString.splice(i, 1)
-        inputString.splice(j, 1)
+for (var i = 0 ; i < inputString.length ; i ++) {
+  for (var j = 1 ; j < sizeString ; j ++) {
+    if(inputString[i] === inputString[j]) {
+      inputString.splice(j, 1)
+      inputString.splice(i, 1)
+      i = 0
     }
+    console.log(inputString)
   }
+  console.log('i: ' + i + ' j: ' + j)
 }
+
+
+//si el palíndromo es par el inputString quedará vacío
+//si el palíndromo es impar tendrá sólo un elemento
+//si el inputString resultante tiene 2 o más elementos no es in palíndromo
