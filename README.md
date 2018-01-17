@@ -1,1 +1,1 @@
-# BackUp Exercises from codefith using javascript 
+# BackUp Exercises from codefight using javascript 
